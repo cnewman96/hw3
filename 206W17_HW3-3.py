@@ -21,13 +21,16 @@ import re
 ## Write code to define your parse_counted_words function here.
 def parse_counted_words(x): 
     y=(re.findall("(\d+)\s(\S[a-zA-Z]+)",x))
-    return y[-1]
+    if len(y)>=1:
+        return y[-1]
+    else:
+        return None 
 
 
 
 
 
-print parse_counted_words('5 watermelons, 13 pineapples, and 1 papaya.')
+
 
 
 ## PART 2: 200 points
